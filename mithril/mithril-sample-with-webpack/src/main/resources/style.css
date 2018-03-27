@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+    font-family: 'Roboto Mono Medium for Powerline';
+}
+
+.counters-panel {
+    display: flex;
+    flex-direction: row;
+}
+
+.counters-panel > .counter-view {
+    margin-right: 10px;
+}
+
+.counters-panel > .counter-view:last-child {
+    margin-right: 0px;
+}
+
+.counter-view {
+    border: solid 1px #d6d6d6;
+    padding: 3px;
+    display: flex;
+}
+
+.counter-view > .trigger {
+    padding: 10px;
+}
+
+.counter-view > .display {
+    padding: 10px;
+}
+
+footer {
+    font-size: 10pt;
+    color: #999;
+}
