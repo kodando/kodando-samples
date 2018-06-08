@@ -1,0 +1,3 @@
+rootProject.name = 'elmish'
+include 'counter-sample'
+

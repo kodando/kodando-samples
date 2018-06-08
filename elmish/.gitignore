@@ -1,0 +1,4 @@
+.gradle
+.idea
+build
+counter-sample/node_modules
