@@ -1,0 +1,11 @@
+group 'br.danfma'
+version '0.1.0'
+
+apply plugin: 'kotlin-dce-js'
+
+dependencies {
+  compile 'br.danfma.kodando:kodando-elmish-react:0.4.0'
+  compile 'br.danfma.kodando:kodando-react:0.5.0'
+  compile 'br.danfma.kodando:kodando-react-dom:0.5.0'
+  compile 'br.danfma.kodando:kodando-rxjs:0.6.2'
+}
