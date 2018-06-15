@@ -33,6 +33,7 @@ subprojects {
     kotlinOptions.sourceMap = true
     kotlinOptions.sourceMapEmbedSources = "always"
     kotlinOptions.moduleKind = 'commonjs'
+    kotlinOptions.freeCompilerArgs = ["-Xprogressive"]
   }
 
   kotlin {

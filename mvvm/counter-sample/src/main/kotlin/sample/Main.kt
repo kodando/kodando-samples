@@ -1,38 +1,25 @@
 package sample
 
+import kodando.mobx.devtool.mobxDevTool
 import kodando.react.dom.ReactDOM
 import kodando.react.dom.div
 import kodando.react.root
 import org.w3c.dom.Element
-import sample.counter.CounterListViewModel
-import sample.counter.autorun
-import sample.counter.mobxDevTool
+import sample.counter.CounterList
+import sample.counter.counterListView
 import kotlin.browser.document
 
 fun main(args: Array<String>) {
+  val counterList = CounterList()
+
   val application = root {
     div {
+      counterListView(counterList)
       mobxDevTool()
     }
   }
 
   ReactDOM.render(application, getContainerElement())
-
-  val counters = CounterListViewModel()
-
-  autorun {
-    console.log("COUNTER CHANGED", counters.size)
-  }
-
-  autorun {
-    console.log("COUNTER IS NEGATIVE", counters.counters.lastOrNull()?.isNegative)
-  }
-
-  console.log("------------------------------------")
-  counters.addCounter()
-
-  console.log("------------------------------------")
-  counters.addCounter().setCount(-10)
 }
 
 
